@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Group Chat</title>
+<link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <h3>Group Chat</h3>
+    </div>
+
+    <div id="chat-box" class="chat-box">
+        
+        <div class="message received">
+            <p>Hello everyone 👋</p>
+            <span class="time">10:20 AM</span>
+        </div>
+
+        <div class="message sent">
+            <p>Hi!</p>
+            <span class="time">10:21 AM</span>
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input 
+        type="text" 
+        id="messageInput" 
+        placeholder="Type a message..."
+        />
+
+        <button onclick="sendMessage()">Send</button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
+</html>
