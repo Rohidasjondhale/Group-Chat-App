@@ -1,0 +1,143 @@
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+padding:20px;
+background:#f4f4f4;
+}
+
+/* top controls */
+#top-controls{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+/* email search */
+#email-search-box{
+display:flex;
+gap:8px;
+}
+
+#email-search-box input{
+padding:8px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+#email-search-box button{
+padding:8px 12px;
+cursor:pointer;
+}
+
+/* group join */
+#group-box{
+display:flex;
+gap:8px;
+}
+
+#group-box input{
+padding:8px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+#group-box button{
+padding:8px 12px;
+cursor:pointer;
+}
+
+/* chat container */
+#chat-container{
+width:400px;
+margin:auto;
+border:1px solid #ccc;
+border-radius:8px;
+padding:10px;
+background:white;
+}
+
+/* chat messages */
+#chat-box{
+height:400px;
+overflow-y:auto;
+border:1px solid #ddd;
+padding:10px;
+margin-bottom:10px;
+background:#f9f9f9;
+}
+
+.message{
+margin:10px 0;
+padding:8px 12px;
+border-radius:8px;
+max-width:70%;
+}
+
+.sent{
+background:#dcf8c6;
+margin-left:auto;
+text-align:right;
+}
+
+.received{
+background:#eee;
+margin-right:auto;
+text-align:left;
+}
+
+/* message input */
+#message-area{
+display:flex;
+gap:8px;
+}
+
+#messageInput{
+flex:1;
+padding:10px;
+}
+
+.send-btn{
+padding:10px 14px;
+cursor:pointer;
+}
+
+</style>
+
+
+<body>
+
+<div id="top-controls">
+
+<!-- GROUP JOIN -->
+<div id="group-box">
+<input type="text" id="groupName" placeholder="Enter group name">
+<button onclick="joinGroup()">Join Group</button>
+</div>
+
+<!-- PERSONAL CHAT -->
+<div id="email-search-box">
+<input type="text" id="searchEmail" placeholder="Enter user email">
+<button onclick="joinRoom()">Join Chat</button>
+</div>
+
+</div>
+
+<!-- CHAT BOX -->
+<div id="chat-container">
+
+<div id="chat-box"></div>
+
+<div id="message-area">
+<input type="text" id="messageInput" placeholder="Type message">
+<button class="send-btn" onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script src="js/chat.js"></script>
+
+</body>
